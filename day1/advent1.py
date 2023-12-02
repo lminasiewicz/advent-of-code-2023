@@ -21,8 +21,10 @@ with open("./data.txt") as f:
     print(solution(data1))
 
 
-# 2
 
+
+
+# 2
 
 numbers = {
     "one": "1",
@@ -56,7 +58,6 @@ def numberify_last(s: str, numbers: dict) -> str:
 
 with open("./data.txt") as f:
     data2 = list(map(lambda line: numberify_last(numberify_first(line.strip().lower(), numbers), numbers), f.readlines()))
-    print(data2)
     print(solution(data2))
 
 
