@@ -24,13 +24,13 @@ def match_cards(card: dict) -> int:
     for elem in card["yours"]:
         if elem in card["winning"]:
             count += 1
-    return get_points(count)
+    return count
 
 
 def solution(data: list[dict]):
     points = []
     for card in data:
-        points.append(match_cards(card))
+        points.append(get_points(match_cards(card)))
     return sum(points)
     
 
